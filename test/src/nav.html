@@ -1,26 +1,23 @@
-    <header>
-        <div class="navbar bg-yellow-500">
+
+    <header class="shadow-md">
+        <div class="hidden md:flex navbar bg-yellow-500">
             <div class="flex-1">
-            <a class="btn btn-ghost text-xl hover:bg-yellow-500 font-bold text-white">TU Robot club</a>
+                <a class="btn btn-ghost text-xl hover:bg-yellow-500 font-bold text-white">TU Robot club</a>
             </div>
             <div class="flex-none ">
                 <div role="tablist" class="tabs tabs-bordered">
-                    <a role="tab" id="home-tab"     class="tab text-white">hoome</a>
-                    <a role="tab" id="about-tab"    class="tab tab-active text-white">about</a>
-                    <a role="tab" id="github-tab"   class="tab text-white">github</a>
-                    <a role="tab" id="audition-tab" class="tab text-white">audition</a>
+                    <a href="index.html" role="tab" id="home-tab"     class="tab text-white">home</a>
+                    <a href="about.html" role="tab" id="about-tab"    class="tab text-white">about</a>
+                    <a href="https://github.com/TURobotClub/TURobotClub.github.io" role="tab" id="github-tab"   class="tab text-white">github</a>
+                    <a href="#" onclick="alert('The audition period hasn’t started yet. Please check back later.'); return false;" role="tab" id="audition-tab" class="tab text-white">audition</a>
                 </div>
             <div class="dropdown dropdown-end">
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-                <div class="w-10 rounded-full">
-                    <img
-                    alt="Tailwind CSS Navbar component"
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    <div class="w-10 h-10 rounded-full bg-gray-500 border-white border-[1px] flex items-center justify-center">
+                        <i class="material-icons text-white my-2">person</i>
+                    </div>                      
                 </div>
-                </div>
-                <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                 <li>
                     <a class="justify-between">
                     Profile
@@ -31,6 +28,27 @@
                 <li><a>Logout</a></li>
                 </ul>
             </div>
+            </div>
+        </div>
+        
+        <!-- Drawer: Visible only on smaller screens (< md) -->
+        <div class="drawer md:hidden">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+                <!-- Position drawer button at the top-left and make it fixed -->
+                <label for="my-drawer" class="btn bg-yellow-500 border-transparent drawer-button fixed top-4 left-4 z-50">
+                    <i class="material-icons">menu</i>
+                </label>
+            </div>
+        
+            <div class="drawer-side">
+            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="pt-20 menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="https://github.com/TURobotClub/TURobotClub.github.io">github</a></li>
+                <li><a href="#" onclick="alert('The audition period hasn’t started yet. Please check back later.'); return false;">Audition</a></li>
+            </ul>
             </div>
         </div>
     </header>
