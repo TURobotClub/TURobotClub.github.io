@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/TURobotClub.github.io",
+  base: "/TURobotClub.github.io/",
 })
